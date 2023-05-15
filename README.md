@@ -1,2 +1,2 @@
 # CoPU
-Java API for interacting with the CoPU ISA
+Java classes for interacting with the CoPU ISA

@@ -1,0 +1,25 @@
+plugins {
+	id "java";
+}
+
+group = "blue.endless";
+archivesBaseName = "CoPU";
+version = "0.0.1";
+
+sourceCompatibility = JavaVersion.VERSION_17;
+targetCompatibility = JavaVersion.VERSION_17;
+
+tasks.withType(JavaCompile) {
+	options.encoding = "UTF-8";
+}
+
+repositories {
+}
+
+dependencies {
+	testImplementation(platform('org.junit:junit-bom:5.9.2'));
+	testImplementation('org.junit.jupiter:junit-jupiter');
+	
+	compileOnly group: "com.google.code.findbugs", name: "jsr305", version: "3.0.2";
+	testImplementation group: "com.google.code.findbugs", name: "jsr305", version: "3.0.2";
+}
